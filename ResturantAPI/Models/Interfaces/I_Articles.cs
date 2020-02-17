@@ -5,13 +5,12 @@ using System.Threading.Tasks;
 
 namespace ResturantAPI.Models
 {
-    public interface IDataRepository<TEntity>
+    public interface I_Articles<TEntity>
     {
         IEnumerable<TEntity> GetAll();
-        TEntity Get(int id);
+        TEntity Get(Guid id);
         void Add(TEntity entity);
-        void Change(TEntity dbEntity, TEntity entity);
+        void Update(TEntity dbEntity, TEntity entity);
         void Delete(TEntity entity);
-
     }
 }

@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ResturantAPI.Models;
 
 namespace ResturantAPI.Migrations
 {
     [DbContext(typeof(ResturantDbContext))]
-    partial class ResturantDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200217162208_SettingTable")]
+    partial class SettingTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -171,30 +173,6 @@ namespace ResturantAPI.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Setting");
-                });
-
-            modelBuilder.Entity("ResturantAPI.Models.BE.Sliders", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<DateTime>("CreatedDate");
-
-                    b.Property<bool>("IsPublic");
-
-                    b.Property<string>("Link");
-
-                    b.Property<string>("Name");
-
-                    b.Property<bool>("Order");
-
-                    b.Property<DateTime>("UpdatedDate");
-
-                    b.Property<string>("Url");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sliders");
                 });
 #pragma warning restore 612, 618
         }

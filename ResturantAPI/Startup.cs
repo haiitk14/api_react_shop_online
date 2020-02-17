@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using ResturantAPI.Models;
+using ResturantAPI.Models.BE;
 
 namespace ResturantAPI
 {
@@ -28,8 +29,8 @@ namespace ResturantAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ResturantDbContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ResturantDB"]));
-            
-            services.AddScoped<IDataRepository<Customer>, CustomerManager>();
+            services.AddScoped<I_Categorys<Categorys>, S_Categorys>();
+            services.AddScoped<I_Articles<Articles>, S_Articles>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -45,7 +46,6 @@ namespace ResturantAPI
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
             app.UseMvc();
         }

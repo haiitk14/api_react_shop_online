@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ResturantAPI.Models.BE;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,11 @@ namespace ResturantAPI.Models
 
         }
         
-        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Articles> Articles { get; set; }
+        public DbSet<Categorys> Categorys { get; set; }
+        public DbSet<Editors> Editors { get; set; }
+        public DbSet<Logos> Logos { get; set; }
+        public DbSet<Setting> Setting { get; set; }
+        public DbSet<Sliders> Sliders { get; set; }
     }
 }

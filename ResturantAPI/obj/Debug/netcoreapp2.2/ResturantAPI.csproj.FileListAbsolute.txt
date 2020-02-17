@@ -26,3 +26,17 @@ D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\Restu
 D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorTargetAssemblyInfo.cache
 D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.dll
 D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.pdb
+D:\REDUX\api_react_shop_online\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.deps.json
+D:\REDUX\api_react_shop_online\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.json
+D:\REDUX\api_react_shop_online\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.dev.json
+D:\REDUX\api_react_shop_online\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.dll
+D:\REDUX\api_react_shop_online\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.pdb
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csproj.CoreCompileInputs.cache
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cache
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cs
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfoInputs.cache
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfo.cs
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorTargetAssemblyInfo.cache
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.dll
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.pdb
+D:\REDUX\api_react_shop_online\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csprojAssemblyReference.cache

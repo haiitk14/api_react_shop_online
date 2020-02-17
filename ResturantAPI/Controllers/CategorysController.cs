@@ -2,20 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using ResturantAPI.Models;
+using ResturantAPI.Models.BE;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace ResturantAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class CustomersController : Controller
+    public class CategorysController : Controller
     {
-        private IDataRepository<Customer> _repository;
+        private I_Categorys<Categorys> _repository;
 
 
-        public CustomersController (IDataRepository<Customer> repository)
+        public CategorysController (I_Categorys<Categorys> repository)
         {
             _repository = repository;
         }
@@ -24,63 +26,63 @@ namespace ResturantAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Customer> customers = _repository.GetAll();
-            return Ok(customers);
+            IEnumerable<Categorys> categorys = _repository.GetAll();
+            return Ok(categorys);
         }
 
         // GET api/<controller>/5
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(Guid id)
         {
-            Customer customer = _repository.Get(id);
+            Categorys categorys = _repository.Get(id);
 
-            if (customer == null)
+            if (categorys == null)
             {
                 return NotFound("The Employee record couldn't be found.");
             }
 
-            return Ok(customer);
+            return Ok(categorys);
         }
 
         // POST api/<controller>
         [HttpPost]
-        public IActionResult Post([FromBody]Customer customer)
+        public IActionResult Post([FromBody]Categorys categorys)
         {
-            if (customer == null)
+            if (categorys == null)
             {
-                return BadRequest("Customer is Null");
+                return BadRequest("Categorys is Null");
             }
-            _repository.Add(customer);
-            return CreatedAtRoute("Get", new { Id = customer.ID }, customer);
+            _repository.Add(categorys);
+            return CreatedAtRoute("Get", new { Id = categorys.Id }, categorys);
         }
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody]Customer customer)
+        public IActionResult Put(Guid id, [FromBody]Categorys categorys)
         {
-            if (customer == null)
+            if (categorys == null)
             {
                 return BadRequest("Customer is null");
             }
-            Customer customerToUpdate = _repository.Get(id);
-            if (customerToUpdate == null)
+            Categorys categorysToUpdate = _repository.Get(id);
+            if (categorysToUpdate == null)
             {
                 return NotFound("Customer could not be found");
             }
-            _repository.Change(customerToUpdate, customer);
+            _repository.Update(categorysToUpdate, categorys);
             return NoContent();
         }
 
         // DELETE api/<controller>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete(Guid id)
         {
-            Customer customer = _repository.Get(id);
-            if (customer == null)
+            Categorys categorys = _repository.Get(id);
+            if (categorys == null)
             {
                 return BadRequest("Customer is not found");
             }
-            _repository.Delete(customer);
+            _repository.Delete(categorys);
             return NoContent();
         }
     }
