@@ -1,0 +1,28 @@
+F:\Web Applications\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.deps.json
+F:\Web Applications\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.json
+F:\Web Applications\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.dev.json
+F:\Web Applications\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.dll
+F:\Web Applications\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.pdb
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csprojAssemblyReference.cache
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csproj.CoreCompileInputs.cache
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cache
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cs
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfoInputs.cache
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfo.cs
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorTargetAssemblyInfo.cache
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.dll
+F:\Web Applications\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.pdb
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.deps.json
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.json
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.runtimeconfig.dev.json
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.dll
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\bin\Debug\netcoreapp2.2\ResturantAPI.pdb
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csprojAssemblyReference.cache
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.csproj.CoreCompileInputs.cache
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cache
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorAssemblyInfo.cs
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfoInputs.cache
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.AssemblyInfo.cs
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.RazorTargetAssemblyInfo.cache
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.dll
+D:\Study\React\WORKPLACE\ResturantAPI\ResturantAPI\obj\Debug\netcoreapp2.2\ResturantAPI.pdb
