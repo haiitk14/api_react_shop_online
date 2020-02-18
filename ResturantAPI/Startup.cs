@@ -31,6 +31,16 @@ namespace ResturantAPI
             services.AddDbContext<ResturantDbContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ResturantDB"]));
             services.AddScoped<I_Categorys<Categorys>, S_Categorys>();
             services.AddScoped<I_Articles<Articles>, S_Articles>();
+
+            // Enable CORS
+            services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
+            {
+                builder.AllowAnyOrigin()
+                       .AllowAnyMethod()
+                       .AllowAnyHeader();
+            }));
+            // End
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -47,6 +57,11 @@ namespace ResturantAPI
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
+
+            // Enable CORS
+            app.UseCors("MyPolicy");
+            // end
+
             app.UseMvc();
         }
     }
