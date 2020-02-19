@@ -6023,7 +6023,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
-      "sha512": "HS3iRWZKcUw/8eZ/08GXKY2Bn7xNzQPzf8gRPHGSowX7u7XXu9i9YEaBeBNKUXWfI7qjvT2zXtLUvbN0hds8vg==",
+      "sha512": "PCg5cCx0OG2SRgGYl30JIpJo/Q7VRpUbedizicRtf0lex0lpjqFxpMN+kNkihGdfuyHpJ3+DmUTMAcNXBMWPeg==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "hasTools": true,
@@ -10086,7 +10086,7 @@
       ]
     },
     "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+      "sha512": "bwWJSSegSYwC1sQW4rJ8FeOMMoyVnYZpX7vrrRriXCY8bU3LYNnyjCCOP/Yhl7nBjBnLoC2KFAAzG6hePgPm3g==",
       "type": "package",
       "path": "system.linq.queryable/4.0.1",
       "files": [
@@ -12943,23 +12943,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hai\\.nuget\\packages\\": {},
+    "C:\\Users\\haidt\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\REDUX\\api_react_shop_online\\ResturantAPI\\ResturantAPI.csproj",
+      "projectUniqueName": "D:\\Study\\React\\WORKPLACE\\ResturantAPI\\ResturantAPI\\ResturantAPI.csproj",
       "projectName": "ResturantAPI",
-      "projectPath": "D:\\REDUX\\api_react_shop_online\\ResturantAPI\\ResturantAPI.csproj",
-      "packagesPath": "C:\\Users\\hai\\.nuget\\packages\\",
-      "outputPath": "D:\\REDUX\\api_react_shop_online\\ResturantAPI\\obj\\",
+      "projectPath": "D:\\Study\\React\\WORKPLACE\\ResturantAPI\\ResturantAPI\\ResturantAPI.csproj",
+      "packagesPath": "C:\\Users\\haidt\\.nuget\\packages\\",
+      "outputPath": "D:\\Study\\React\\WORKPLACE\\ResturantAPI\\ResturantAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\hai\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\haidt\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

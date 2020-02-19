@@ -12,7 +12,8 @@ using ResturantAPI.Models.BE;
 namespace ResturantAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class CategorysController : Controller
+    [ApiController]
+    public class CategorysController : ControllerBase
     {
         private I_Categorys<Categorys> _repository;
 
