@@ -10,6 +10,9 @@
 
 # production
 /build
+/ResturantAPI/bin/
+/ResturantAPI/obj/
+/ResturantAPI/obj/Debug/
 
 # misc
 .DS_Store
