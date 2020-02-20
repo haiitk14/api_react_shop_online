@@ -26,7 +26,7 @@ namespace ResturantAPI.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Articles> articles = _repository.GetAll();
+            IEnumerable<ArticlesDTO> articles = _repository.GetAll();
             return Ok(articles);
         }
 
@@ -46,14 +46,14 @@ namespace ResturantAPI.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        public IActionResult Post([FromBody]Articles articles)
+        public IActionResult Post([FromBody]ArticlesDTO articles)
         {
             if (articles == null)
             {
-                return BadRequest("Categorys is Null");
+                return BadRequest("Article is Null");
             }
             _repository.Add(articles);
-            return CreatedAtRoute("Get", new { Id = articles.Id }, articles);
+            return Ok(articles);
         }
 
         // PUT api/<controller>/5
@@ -70,7 +70,7 @@ namespace ResturantAPI.Controllers
                 return NotFound("Customer could not be found");
             }
             _repository.Update(articlesToUpdate, articles);
-            return NoContent();
+            return Ok(articles);
         }
 
         // DELETE api/<controller>/5
@@ -83,7 +83,7 @@ namespace ResturantAPI.Controllers
                 return BadRequest("Customer is not found");
             }
             _repository.Delete(articles);
-            return NoContent();
+            return Ok(articles);
         }
     }
 }

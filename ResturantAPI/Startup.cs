@@ -31,6 +31,7 @@ namespace ResturantAPI
             services.AddDbContext<ResturantDbContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:ResturantDB"]));
             services.AddScoped<I_Categorys<Categorys>, S_Categorys>();
             services.AddScoped<I_Articles<Articles>, S_Articles>();
+            services.AddScoped<I_Editors<Editors>, S_Editors>();
             // Enable CORS
             services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             {
