@@ -55,7 +55,7 @@ namespace ResturantAPI.Controllers
                 return BadRequest("Categorys is Null");
             }
             _repository.Add(categorys);
-            return CreatedAtRoute("Get", new { Id = categorys.Id }, categorys);
+            return Ok(categorys);
         }
 
         // PUT api/<controller>/5
@@ -72,7 +72,7 @@ namespace ResturantAPI.Controllers
                 return NotFound("Customer could not be found");
             }
             _repository.Update(categorysToUpdate, categorys);
-            return NoContent();
+            return Ok(categorys);
         }
 
         // DELETE api/<controller>/5
@@ -85,7 +85,14 @@ namespace ResturantAPI.Controllers
                 return BadRequest("Customer is not found");
             }
             _repository.Delete(categorys);
-            return NoContent();
+            return Ok(categorys);
+        }
+
+        [HttpGet("ispublic/{ispublic}")]
+        public IActionResult GetCategorysByIsPublic(bool ispublic)
+        {
+            IEnumerable<Categorys> categorys = _repository.GetByIsPublic(ispublic);
+            return Ok(categorys);
         }
     }
 }

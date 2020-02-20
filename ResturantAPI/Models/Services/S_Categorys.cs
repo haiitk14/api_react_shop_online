@@ -34,6 +34,15 @@ namespace ResturantAPI.Models
         public void Update(Categorys categorys, Categorys entity)
         {
             categorys.Name = entity.Name;
+            categorys.Code = entity.Code;
+            categorys.Description = entity.Description;
+            categorys.IsMenu = entity.IsMenu;
+            categorys.IsPublic = entity.IsPublic;
+            categorys.Order = entity.Order;
+            categorys.TitleSeo = entity.TitleSeo;
+            categorys.KeywordsSeo = entity.KeywordsSeo;
+            categorys.DescriptionSeo = entity.DescriptionSeo;
+            categorys.UpdatedDate = entity.UpdatedDate;
             _resturantDb.SaveChanges();
         }
 
@@ -41,6 +50,12 @@ namespace ResturantAPI.Models
         {
             _resturantDb.Categorys.Remove(categorys);
             _resturantDb.SaveChanges();
+        }
+
+        public IEnumerable<Categorys> GetByIsPublic(bool isPublic)
+        {
+            return _resturantDb.Categorys
+                  .Where(w => w.IsPublic == isPublic).ToList();
         }
     }
 }
