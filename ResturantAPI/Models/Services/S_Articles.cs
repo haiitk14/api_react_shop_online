@@ -25,15 +25,55 @@ namespace ResturantAPI.Models
             var listArticles = listArticlesEditors.Join(_resturantDb.Categorys,
                 art => art.Articles.CategoryId,
                 cate => cate.Id,
-                (art, cate) => new ArticlesDTO() { Id = art.Articles.Id, CategoryId = art.Articles.CategoryId, Name = art.Articles.Name, Description = art.Articles.Description, Order = art.Articles.Order, IsPublic = art.Articles.IsPublic, Slug = art.Articles.Slug, TitleSeo = art.Articles.TitleSeo, KeywordsSeo = art.Articles.KeywordsSeo, DescriptionSeo = art.Articles.DescriptionSeo, CreatedDate = art.Articles.CreatedDate, UpdatedDate = art.Articles.UpdatedDate, Image = art.Articles.Image, CategoryName = cate.Name, Content = art.Editors.Content }).ToList();
+                (art, cate) => new ArticlesDTO() {
+                    Id = art.Articles.Id,
+                    CategoryId = art.Articles.CategoryId,
+                    Name = art.Articles.Name,
+                    Description = art.Articles.Description,
+                    Order = art.Articles.Order,
+                    IsPublic = art.Articles.IsPublic,
+                    Slug = art.Articles.Slug,
+                    TitleSeo = art.Articles.TitleSeo,
+                    KeywordsSeo = art.Articles.KeywordsSeo,
+                    DescriptionSeo = art.Articles.DescriptionSeo,
+                    CreatedDate = art.Articles.CreatedDate,
+                    UpdatedDate = art.Articles.UpdatedDate,
+                    Image = art.Articles.Image,
+                    CategoryName = cate.Name,
+                    Content = art.Editors.Content
+                }).ToList();
 
             return listArticles;
         }
 
         public Articles Get(Guid id)
         {
-            return _resturantDb.Articles
-                  .FirstOrDefault(e => e.Id == id);
+            return _resturantDb.Articles.FirstOrDefault(w => w.Id == id);
+        }
+
+        public ArticlesDTO GetDTO(Guid id)
+        {
+            var article = _resturantDb.Articles.FirstOrDefault(w => w.Id == id);
+            var editor = _resturantDb.Editors.FirstOrDefault(w => w.ArticlesId == id);
+            var result = new ArticlesDTO()
+            {
+                Id = article.Id,
+                CategoryId = article.CategoryId,
+                Name = article.Name,
+                Slug = article.Slug,
+                Order = article.Order,
+                Image = article.Image,
+                Description = article.Description,
+                IsPublic = article.IsPublic,
+                TitleSeo = article.TitleSeo,
+                KeywordsSeo = article.KeywordsSeo,
+                DescriptionSeo = article.DescriptionSeo,
+                CreatedDate = article.CreatedDate,
+                UpdatedDate = article.UpdatedDate,
+                Content = editor.Content
+            };
+
+            return result;
         }
 
         public void Add(ArticlesDTO articlesDTO)
@@ -67,11 +107,24 @@ namespace ResturantAPI.Models
             _resturantDb.SaveChanges();
         }
 
-        public void Update(Articles articles, Articles entity)
+        public void Update(Articles articles, ArticlesDTO entity)
         {
-
             articles.Name = entity.Name;
+            articles.Slug = entity.Slug;
+            articles.CategoryId = entity.CategoryId;
+            articles.Order = entity.Order;
+            articles.IsPublic = entity.IsPublic;
+            articles.Image = entity.Image;
+            articles.Description = entity.Description;
+            articles.TitleSeo = entity.TitleSeo;
+            articles.KeywordsSeo = entity.KeywordsSeo;
+            articles.DescriptionSeo = entity.DescriptionSeo;
+            articles.CreatedDate = entity.CreatedDate;
+            articles.UpdatedDate = DateTime.Now;
 
+            var editor = _resturantDb.Editors.FirstOrDefault(w => w.ArticlesId == articles.Id);
+            editor.Content = entity.Content;
+            editor.UpdatedDate = DateTime.Now;
             _resturantDb.SaveChanges();
         }
 

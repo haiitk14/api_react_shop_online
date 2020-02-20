@@ -34,7 +34,7 @@ namespace ResturantAPI.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
-            Articles articles = _repository.Get(id);
+            ArticlesDTO articles = _repository.GetDTO(id);
 
             if (articles == null)
             {
@@ -58,7 +58,7 @@ namespace ResturantAPI.Controllers
 
         // PUT api/<controller>/5
         [HttpPut("{id}")]
-        public IActionResult Put(Guid id, [FromBody]Articles articles)
+        public IActionResult Put(Guid id, [FromBody]ArticlesDTO articles)
         {
             if (articles == null)
             {

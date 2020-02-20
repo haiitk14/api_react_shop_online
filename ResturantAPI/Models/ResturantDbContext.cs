@@ -21,5 +21,6 @@ namespace ResturantAPI.Models
         public DbSet<Logos> Logos { get; set; }
         public DbSet<Setting> Setting { get; set; }
         public DbSet<Sliders> Sliders { get; set; }
+        public DbSet<Images> Images { get; set; }
     }
 }

@@ -9,9 +9,10 @@ namespace ResturantAPI.Models
     public interface I_Articles<TEntity>
     {
         IEnumerable<ArticlesDTO> GetAll();
-        TEntity Get(Guid id);
+        Articles Get(Guid id);
+        ArticlesDTO GetDTO(Guid id);
         void Add(ArticlesDTO entity);
-        void Update(TEntity dbEntity, TEntity entity);
+        void Update(TEntity dbEntity, ArticlesDTO entity);
         void Delete(TEntity entity);
     }
 }
