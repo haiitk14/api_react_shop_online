@@ -48,6 +48,8 @@ namespace ResturantAPI.Models
 
         public void Delete(Categorys categorys)
         {
+            var articles = _resturantDb.Articles.Where(w => w.CategoryId == categorys.Id ).ToList();
+            _resturantDb.Articles.RemoveRange(articles);
             _resturantDb.Categorys.Remove(categorys);
             _resturantDb.SaveChanges();
         }

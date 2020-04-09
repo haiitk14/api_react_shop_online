@@ -52,8 +52,8 @@ namespace ResturantAPI.Controllers
             {
                 return BadRequest("Article is Null");
             }
-            _repository.Add(articles);
-            return Ok(articles);
+            var res = _repository.Add(articles);
+            return Ok(res);
         }
 
         // PUT api/<controller>/5

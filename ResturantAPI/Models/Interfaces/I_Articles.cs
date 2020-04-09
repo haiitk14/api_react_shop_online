@@ -11,7 +11,7 @@ namespace ResturantAPI.Models
         IEnumerable<ArticlesDTO> GetAll();
         Articles Get(Guid id);
         ArticlesDTO GetDTO(Guid id);
-        void Add(ArticlesDTO entity);
+        ArticlesDTO Add(ArticlesDTO entity);
         void Update(TEntity dbEntity, ArticlesDTO entity);
         void Delete(TEntity entity);
     }

@@ -76,8 +76,13 @@ namespace ResturantAPI.Models
             return result;
         }
 
-        public void Add(ArticlesDTO articlesDTO)
+        public ArticlesDTO Add(ArticlesDTO articlesDTO)
         {
+            var result = articlesDTO;
+            var listCategorys = _resturantDb.Categorys.ToList();
+            var categoryForArticle = listCategorys.Where(w => w.Id == articlesDTO.CategoryId).FirstOrDefault();
+            result.CategoryName = categoryForArticle != null ? categoryForArticle.Name : "";
+
             var articles = new Articles()
             {
                 Id = articlesDTO.Id,
@@ -105,6 +110,8 @@ namespace ResturantAPI.Models
             _resturantDb.Articles.Add(articles);
             _resturantDb.Editors.Add(editors);
             _resturantDb.SaveChanges();
+
+            return result;
         }
 
         public void Update(Articles articles, ArticlesDTO entity)
