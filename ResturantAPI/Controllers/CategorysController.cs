@@ -47,7 +47,6 @@ namespace ResturantAPI.Controllers
 
         // POST api/<controller>
         [HttpPost]
-        [EnableCors("MyPolicy")]
         public IActionResult Post([FromBody]Categorys categorys)
         {
             if (categorys == null)
